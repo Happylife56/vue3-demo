@@ -1,0 +1,321 @@
+//flex布局样式
+//单轴
+@mixin flex-type ($type1, $type2) {
+    display: flex;
+    justify-content: $type1;
+    align-items: $type2;
+}
+
+//多轴
+@mixin flex-types ($type1, $type2) {
+    display: flex;
+    flex-direction: column;
+    justify-content: $type1;
+    align-items: $type2;
+}
+
+//设置竖直方向
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+@mixin bgWhite {
+    background: #fff;
+}
+
+@mixin font-size($size) {
+    font-size: #{$size}px;
+}
+
+@mixin margin($direction, $size) {
+    margin-#{$direction}:#{$size}px;
+}
+
+.flex {
+    display: flex
+}
+
+.flex-justify-center {
+    @include flex-type(center, null);
+}
+
+.flex-align-center {
+    @include flex-type(null, center);
+}
+
+.flex-center {
+    @include flex-type(center, center);
+}
+
+.flex-between {
+    @include flex-type(space-between, center);
+}
+
+.flex-column {
+    @include flex-column()
+}
+
+.flexs-center {
+    @include flex-types(center, center);
+}
+
+.flexs-align-center {
+    @include flex-types(null, center);
+}
+
+.flexs-justify-center {
+    @include flex-types(center, null);
+}
+
+// 主题色
+$themeColor: #f4364c;
+// 加粗色
+$color333: #333333;
+//蓝色
+$blueColor: #409eff;
+$mainColor: #409EFF;
+$color999: #999999;
+$colorGray:#97a8be;
+$fontSize:18px;
+$fontSize16:16px;
+
+.color-33 {
+    color: $color333;
+}
+
+.color-99 {
+    color: $color999;
+}
+
+.color-66 {
+    color: #666666;
+}
+
+.color-d2 {
+    color: #d2d2d2;
+}
+
+.c-yellow {
+    color: #ffb14d;
+}
+
+.c-red {
+    color: #ff3d3d;
+}
+
+.c-green {
+    color: #66bf4b;
+}
+
+.c-blue {
+    color: $blueColor;
+}
+
+.c-ali {
+    color: #039feb;
+}
+
+.c-gray {
+    color: $colorGray
+}
+
+
+.big-font {
+    font-size: 32px;
+}
+
+.font-size16 {
+    font-size: 16px;
+}
+
+// 图表的颜色
+.iconfont-red {
+    color: #ff3d3d !important;
+}
+
+//微信
+.icon-weixin,
+.icon-weixin2 {
+    color: #66bf4b;
+}
+
+
+//支付宝
+.icon-zfb-on,
+.icon-zhifubao {
+    color: #039feb;
+}
+
+//支付宝
+
+.icon-vip1 {
+    color: #ff7178;
+}
+
+//会员卡
+
+.icon-xianjin {
+    color: #ffb14d;
+}
+
+//现金
+
+.icon-yinxingqia1 {
+    color: #ffb922;
+}
+
+$backgroundColor: #feebed;
+$borderDivColor:#d8dce5;
+$borderColor:#f5f5f5;
+
+//超出显示省略号
+.text-overflow {
+    text-align: left;
+    overflow: hidden;
+    display: inline-block;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+//超出显示省略号
+.text-overflow2 {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+
+//去除浏览器自动填充内容背景颜色为黄色解决方法
+input:-webkit-autofill {
+    box-shadow: 0 0 0px 1000px white inset !important;
+}
+
+.mb6 {
+    margin-bottom: 6px;
+}
+
+.mr6 {
+    margin-right: 6px;
+}
+
+.mt10 {
+    margin-top: 10px;
+}
+
+.ml10 {
+    margin-left: 10px;
+}
+
+.mr10 {
+    margin-right: 10px;
+}
+
+.mr20 {
+    margin-right: 20px;
+}
+
+.mr30 {
+    margin-right: 30px;
+}
+
+.mb10 {
+    margin-bottom: 10px;
+}
+
+.mb20 {
+    margin-bottom: 20px;
+}
+
+.ml20 {
+    margin-left: 20px;
+}
+
+.mt20 {
+    margin-top: 20px;
+}
+
+.width-120 {
+    width: 120px
+}
+
+.width-350 {
+    width: 350px;
+}
+
+.width-240 {
+    width: 240px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.line-through {
+    text-decoration: line-through;
+}
+
+.pointer {
+    cursor: pointer;
+}
+
+.not-allowed {
+    cursor: not-allowed;
+}
+
+.weight-600 {
+    font-weight: 600;
+}
+
+.clearfix {
+    display: block;
+    zoom: 1;
+}
+
+.clearfix:after {
+    content: "";
+    display: block;
+    height: 0;
+    clear: both;
+    visibility: hidden;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.title-text {
+    font-size: $fontSize;
+    font-weight: 600;
+}
+
+/*定义滚动条高宽及背景 高宽分别对应横竖滚动条的尺寸*/
+::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+    background-color: #F5F5F5;
+}
+
+/*定义滚动条轨道 内阴影+圆角*/
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+/*定义滑块 内阴影+圆角*/
+::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 2px rgba(0, 0, 0, .3);
+    background-color: #dadada;
+}
